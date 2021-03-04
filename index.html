@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <title>Custom Mobile Css Menu</title>
+
+  <style>
+    body {
+      padding-top: 50px;
+    }
+    nav {
+      border-bottom: 2px solid #333;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+    }
+    /* css multi selector */
+    nav .fa-bars {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1rem;
+    }
+    nav h1 {
+      padding: .44rem 0 0 1rem;
+    }
+    .mobile-menu {
+      background-color: white;
+      border: 2px solid #333;
+      border-style: none none solid solid;
+      z-index: 10;
+      position: fixed;
+      top: 0;
+      right: -60vh;
+      width: 58vw;
+      height: 60vh;
+      padding: 13px;
+      /* display: none; */
+
+    /* css animations */
+      transition-property: right;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+    }
+    .fa-times {
+      font-size: 1rem;
+    }
+
+    .on-screen {
+      right: 0;
+    }
+
+    p {
+      margin: 8%;
+    }
+
+  </style>
+
+
+</head>
+<body>
+
+
+  <div class="mobile-menu">
+    <i class="fa fa-times" id="closeIcon" aria-hidden="true"></i>
+  </div>
+
+  <!-- nav BEGINS -->
+  <div class="container-fluid">
+    <nav>
+      <h1>Dictionary</h1>
+      <i class="fa fa-bars" id="menuIcon" aria-hidden="true"></i>
+    </nav>
+  </div>
+  <!-- nav ENDS -->
+
+  <!-- dummy content BEGINS-->
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <!-- dummy content ENDS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+    // $('document').ready(function(){
+    //   $('#menuIcon').click(function(){
+    //     $('.mobile-menu').show();
+    //   });
+    //
+    //   $('#closeIcon').click(function(){
+    //     $('.mobile-menu').hide();
+    //   });
+    //
+    // });
+    $('#menuIcon').click(function(){
+      $('.mobile-menu').addClass('on-screen');
+    });
+
+    $('#closeIcon').click(function(){
+      $('.mobile-menu').removeClass('on-screen');
+    });
+  </script>
+</body>
+</html>
