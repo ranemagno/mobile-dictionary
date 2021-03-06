@@ -1,0 +1,114 @@
+body {
+  padding-top: 50px;
+  margin: 0 8% 8% 8%;
+}
+p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  border-bottom: 2px solid #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 88;
+}
+/* css multi selector */
+nav .fa-bars {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1rem;
+}
+nav h1 {
+  font-size: 1rem;
+  padding: .85rem 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+}
+.mobile-menu {
+  background-color: white;
+  border: 2px solid #333;
+  border-style: none none solid solid;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  right: -60vh;
+  width: 58vw;
+  height: 60vh;
+  padding: 13px;
+  /* display: none; */
+
+/* css animations */
+  transition-property: right;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+.mobile-menu p  {
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Work Sans', sans-serif;
+}
+.fa-times {
+  font-size: 1rem;
+}
+.on-screen {
+  right: 0;
+}
+
+.home-cards {
+  position: relative;
+                                  /* z-index: 9; */
+  margin-top: 3vh;
+}
+
+/* start of search bar */
+#searchBar {
+  border: none;
+  width: 35vh;
+  position: relative;
+                                    /* z-index: 2; */
+}
+.search-bar {
+  border: 2px solid #333;
+}
+.search-bar.fa-search {
+  float: right;
+}
+.recently-added {
+  height: 30vh;
+  border: 2px solid #333;
+  border-style: none none solid none;
+}
+.recently-added h1 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 5rem;
+  font-weight: 600;
+}
+.recently-added h3 {
+  font-size: .5rem;
+  color: rgb(212, 212, 212);
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: .2rem;
+}
+.recently-added h2 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.recently-added p {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  font-family: 'Shippori Mincho B1', serif;
+  margin-top: 2vh;
+}
+
+
+
+.mockup-box {
+  height: 30vh;
+  border: 2px solid #333;
+}

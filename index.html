@@ -1,88 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!-- v2
+    issues - content is coming infront of the top navigation, z-index commented out -->
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/font-awesome.min.css">
-  <title>Custom Mobile Css Menu</title>
-
-  <style>
-    body {
-      padding-top: 50px;
-    }
-    nav {
-      border-bottom: 2px solid #333;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 50px;
-    }
-    /* css multi selector */
-    nav .fa-bars {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1rem;
-    }
-    nav h1 {
-      padding: .44rem 0 0 1rem;
-    }
-    .mobile-menu {
-      background-color: white;
-      border: 2px solid #333;
-      border-style: none none solid solid;
-      z-index: 10;
-      position: fixed;
-      top: 0;
-      right: -60vh;
-      width: 58vw;
-      height: 60vh;
-      padding: 13px;
-      /* display: none; */
-
-    /* css animations */
-      transition-property: right;
-      transition-duration: 1s;
-      transition-timing-function: ease-in-out;
-    }
-    .fa-times {
-      font-size: 1rem;
-    }
-
-    .on-screen {
-      right: 0;
-    }
-
-    p {
-      margin: 8%;
-    }
-
-  </style>
-
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<title>Custom Mobile Css Menu</title>
 </head>
+
 <body>
-
-
   <div class="mobile-menu">
     <i class="fa fa-times" id="closeIcon" aria-hidden="true"></i>
+    <p>Add</p>
+    <p>Discover</p>
+    <p>Settings</p>
   </div>
 
   <!-- nav BEGINS -->
-  <div class="container-fluid">
+  <div class="container-fluid" id="navContainer">
     <nav>
-      <h1>Dictionary</h1>
+      <h1>My Dictionary</h1>
       <i class="fa fa-bars" id="menuIcon" aria-hidden="true"></i>
     </nav>
   </div>
   <!-- nav ENDS -->
 
-  <!-- dummy content BEGINS-->
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <!-- dummy content ENDS-->
+<div class="bring-to-back">
+  <!-- search bar BEGINS -->
+  <div class="search-bar home-cards">
+    <input type="text" id="searchBar">
+    <i class="fa fa-search" aria-hidden="true"></i>
+  </div>
+  <!-- search bar ENDS -->
+
+  <!-- recently added BEGINS -->
+  <div class="recently-added home-cards">
+    <h3>RECENTLY ADDED</h3>
+    <h1>Stasis</h1>
+    <h2>/ˈsteɪsɪs,ˈstasɪs/</h2>
+    <p>a period or state of inactivity or equilibrium</p>
+  </div>
+  <!-- recently added ENDS -->
+
+  <div class="mockup-box home-cards">
+    <h2>content</h2>
+  </div>
+
+  <div class="mockup-box home-cards">
+    <h2>content</h2>
+  </div>
+</div>
+<!-- end of bring to back -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script>
     // $('document').ready(function(){
