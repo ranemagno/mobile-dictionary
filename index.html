@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- v3
-    issues - search bar infront, border issues -->
+<!-- v4 -->
 
 
 <head>
@@ -45,11 +44,10 @@
   </div>
   <!-- recently added ENDS -->
 
-  <!-- info cards BEGINS -->
+  <!-- info card container fluid BEGINS -->
   <div class="container-fluid">
-    <div class="info-card home-cards">
-      <!-- <h2>Synonyms</h2> -->
 
+    <div class="info-card home-cards">
       <!-- filter buttons BEGINS -->
       <div class="filter">
         <div class="row">
@@ -80,15 +78,40 @@
         <div class="col">parity</div>
       </div>
       <!-- synonyms ENDS -->
+
+      <!-- antonym BEGINS -->
+      <div class="row gx-4 gy-4 antonym-list">
+        <div class="col">difference</div>
+        <div class="col">disproportion</div>
+        <div class="col">inequality</div>
+        <div class="col">disagreement</div>
+        <div class="col">imbalance</div>
+        <div class="col">uneveness</div>
+      </div>
+      <!-- antonym ENDS -->
+
+      <!-- entymol BEGINS -->
+      <div class="entymol-list">
+        <p>Mid 18th century: modern Latin, from Greek, literally ‘standing, stoppage’, from sta- base of histanai ‘to stand’.</p>
+      </div>
+      <!-- entymol ENDS -->
     </div>
     <!-- info card ENDS -->
   </div>
   <!-- info card container fluid ENDS -->
 
+  <h2 class="example-head">Example Sentence</h2>
+
+  <!-- example sentence BEGINS -->
+  <div class="example-card home-cards">
+    <p>This corrupt bargain results in a decade-long <i class="blue-text">stasis</i>, with far-reaching implications</p>
+  </div>
+
   <!-- search bar BEGINS -->
   <div class="search-bar home-cards">
     <input type="text" id="searchBar">
     <i class="fa fa-search" aria-hidden="true"></i>
+  </input>
   </div>
   <!-- search bar ENDS -->
 
