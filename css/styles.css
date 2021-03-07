@@ -7,6 +7,7 @@ p, h1, h2, h3 {
   padding: 0;
 }
 nav {
+  background-color: #fcfcfc;
   border-bottom: 2px solid #333;
   position: fixed;
   top: 0;
@@ -29,7 +30,7 @@ nav h1 {
   letter-spacing: .5rem;
 }
 .mobile-menu {
-  background-color: white;
+  background-color: #fcfcfc;
   border: 2px solid #333;
   border-style: none none solid solid;
   z-index: 99;
@@ -59,56 +60,85 @@ nav h1 {
 }
 
 .home-cards {
-  position: relative;
-                                  /* z-index: 9; */
-  margin-top: 3vh;
+  margin-top: 4vh;
+}
+
+.recent-search {
+  height: 32vh;
+  border: 2px solid #333;
+  border-style: none none solid none;
+}
+.recent-search h1 {
+  font-family: 'Shippori Mincho B1', serif;
+  font-size: 5rem;
+  font-weight: 600;
+}
+.recent-search h3 {
+  font-size: .5rem;
+  color: rgb(212, 212, 212);
+  font-family: 'Work Sans', sans-serif;
+  letter-spacing: .2rem;
+}
+.recent-search h2 {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: rgb(73, 173, 255);
+}
+.recent-search p {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+  font-family: 'Work Sans', sans-serif;
+  margin-top: 2vh;
+}
+
+.filter-btn {
+  background-color: #fafafa;
+  text-decoration: none;
+  text-align: center;
+  border: 2px solid rgb(73, 173, 255);
+  border-radius: 0px;
+  color: #333;
+  padding: .5rem .2rem .5rem .2rem;
+}
+.filter-btn:visited,
+.filter-btn:link,
+.filter-btn:active {
+  color: #fafafa;
+}
+.filter-btn-mid {
+  border-style: solid none solid none;
+}
+
+.info-card {
+  height: 30vh;
+  text-align: left;
+  font-weight: 500;
+  font-family: 'Work Sans', sans-serif;
+}
+.info-card h2 {
+  font-weight: 600;
+  font-family: 'Shippori Mincho B1', serif;
+  margin-bottom: 10%;
+}
+.synonym-list {
+  margin-top: 3%;
+}
+.show-filter {
+  background-color: rgb(73, 173, 255);
+  color: #fafafa;
 }
 
 /* start of search bar */
 #searchBar {
   border: none;
   width: 35vh;
-  position: relative;
-                                    /* z-index: 2; */
+  float: left;
 }
 .search-bar {
   border: 2px solid #333;
 }
 .search-bar.fa-search {
   float: right;
-}
-.recently-added {
-  height: 30vh;
-  border: 2px solid #333;
-  border-style: none none solid none;
-}
-.recently-added h1 {
-  font-family: 'Shippori Mincho B1', serif;
-  font-size: 5rem;
-  font-weight: 600;
-}
-.recently-added h3 {
-  font-size: .5rem;
-  color: rgb(212, 212, 212);
-  font-family: 'Work Sans', sans-serif;
-  letter-spacing: .2rem;
-}
-.recently-added h2 {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-.recently-added p {
-  font-size: 1.5rem;
-  font-style: italic;
-  font-weight: 400;
-  font-family: 'Shippori Mincho B1', serif;
-  margin-top: 2vh;
-}
-
-
-
-.mockup-box {
-  height: 30vh;
-  border: 2px solid #333;
 }

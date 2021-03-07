@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- v2
-    issues - content is coming infront of the top navigation, z-index commented out -->
+<!-- v3
+    issues - search bar infront, border issues -->
 
 
 <head>
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-<title>Custom Mobile Css Menu</title>
+<title>My Dictionary</title>
 </head>
 
 <body>
@@ -28,13 +28,63 @@
   <!-- nav BEGINS -->
   <div class="container-fluid" id="navContainer">
     <nav>
-      <h1>My Dictionary</h1>
+      <h1>Simple Dictionary</h1>
       <i class="fa fa-bars" id="menuIcon" aria-hidden="true"></i>
     </nav>
   </div>
-  <!-- nav ENDS -->
+  <!-- nav container fluid ENDS -->
 
-<div class="bring-to-back">
+  <!-- recently added BEGINS -->
+  <div class="recent-search home-cards">
+    <h3>RECENT SEARCH</h3>
+    <h1>Stasis</h1>
+    <h2>/ˈsteɪsɪs,ˈstasɪs/
+      <i class="fa fa-volume-up" aria-hidden="true"></i>
+    </h2>
+    <p>a period or state of inactivity or equilibrium.</p>
+  </div>
+  <!-- recently added ENDS -->
+
+  <!-- info cards BEGINS -->
+  <div class="container-fluid">
+    <div class="info-card home-cards">
+      <!-- <h2>Synonyms</h2> -->
+
+      <!-- filter buttons BEGINS -->
+      <div class="filter">
+        <div class="row">
+          <div class="col-4 filter-btn show-filter filter-synonym">
+            synonyms
+          </div>
+          <div class="col-4 filter-btn filter-btn-mid filter-antonym">
+            antonyms
+          </div>
+          <div class="col-4 filter-btn filter-entymol">
+            entymol.
+          </div>
+        </div>
+        <!-- row ENDS -->
+      </div>
+      <!-- filter buttons ENDS -->
+
+      <!-- synonyms -->
+      <div class="row gx-4 gy-4 synonym-list">
+        <div class="col">equilibrium</div>
+        <div class="col">eveness</div>
+        <div class="col">correspondence</div>
+        <div class="col">symmetry</div>
+        <div class="col">tension</div>
+        <div class="col">counterbalance</div>
+        <div class="col">equity</div>
+        <div class="col">equivalence</div>
+        <div class="col">parity</div>
+      </div>
+      <!-- synonyms ENDS -->
+    </div>
+    <!-- info card ENDS -->
+  </div>
+  <!-- info card container fluid ENDS -->
+
   <!-- search bar BEGINS -->
   <div class="search-bar home-cards">
     <input type="text" id="searchBar">
@@ -42,43 +92,8 @@
   </div>
   <!-- search bar ENDS -->
 
-  <!-- recently added BEGINS -->
-  <div class="recently-added home-cards">
-    <h3>RECENTLY ADDED</h3>
-    <h1>Stasis</h1>
-    <h2>/ˈsteɪsɪs,ˈstasɪs/</h2>
-    <p>a period or state of inactivity or equilibrium</p>
-  </div>
-  <!-- recently added ENDS -->
 
-  <div class="mockup-box home-cards">
-    <h2>content</h2>
-  </div>
-
-  <div class="mockup-box home-cards">
-    <h2>content</h2>
-  </div>
-</div>
-<!-- end of bring to back -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script>
-    // $('document').ready(function(){
-    //   $('#menuIcon').click(function(){
-    //     $('.mobile-menu').show();
-    //   });
-    //
-    //   $('#closeIcon').click(function(){
-    //     $('.mobile-menu').hide();
-    //   });
-    //
-    // });
-    $('#menuIcon').click(function(){
-      $('.mobile-menu').addClass('on-screen');
-    });
-
-    $('#closeIcon').click(function(){
-      $('.mobile-menu').removeClass('on-screen');
-    });
-  </script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
