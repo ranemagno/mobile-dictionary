@@ -1,13 +1,17 @@
 body {
   padding-top: 50px;
   margin: 0 8% 8% 8%;
+  background-color: #fafafa;
 }
 p, h1, h2, h3 {
   margin: 0;
   padding: 0;
 }
+/* document default styles -----------------------------------------------------*/
+
+/* nav BEGINS */
 nav {
-  background-color: #fcfcfc;
+  background-color: #fbfbfb;
   border-bottom: 2px solid #333;
   position: fixed;
   top: 0;
@@ -16,8 +20,7 @@ nav {
   height: 50px;
   z-index: 88;
 }
-/* css multi selector */
-nav .fa-bars {
+nav .fa-bars { /* css multi selector */
   position: fixed;
   top: 1rem;
   right: 1rem;
@@ -40,9 +43,7 @@ nav h1 {
   width: 58vw;
   height: 60vh;
   padding: 13px;
-  /* display: none; */
-
-/* css animations */
+  /* css animations */
   transition-property: right;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
@@ -58,11 +59,14 @@ nav h1 {
 .on-screen {
   right: 0;
 }
+/* nav ENDS --------------------------------------------------------------------*/
 
+/* all cards */
 .home-cards {
   margin-top: 4vh;
 }
 
+/* recent search BEGINS */
 .recent-search {
   height: 30vh;
   border: 2px solid #333;
@@ -92,7 +96,9 @@ nav h1 {
   font-family: 'Work Sans', sans-serif;
   margin-top: 2vh;
 }
+/* recent search ENDS ----------------------------------------------------------*/
 
+/* filter buttons BEGINS */
 .filter-btn {
   background-color: #fafafa;
   text-decoration: none;
@@ -110,6 +116,13 @@ nav h1 {
 .filter-btn-mid {
   border-style: solid none solid none;
 }
+.show-filter {
+  background-color: rgb(73, 173, 255);
+  color: #fafafa;
+}
+/* filter button ENDS ----------------------------------------------------------*/
+
+/* info container BEGINS */
 .info-card {
   height: 30vh;
   text-align: left;
@@ -120,37 +133,24 @@ nav h1 {
   font-weight: 600;
   font-family: 'Shippori Mincho B1', serif;
 }
+/* info container ENDS ---------------------------------------------------------*/
+
+/* list styles BEGINS */
 .synonym-list,
 .antonym-list {
-  margin-top: 3%;
+  margin-top: 0vh;
 }
 .entymol-list {
-  margin-top: 10%;
+  margin-top: 3vh;
   font-size: 1.2rem;
 }
-.show-filter {
-  background-color: rgb(73, 173, 255);
-  color: #fafafa;
-}
-
-/* start of search bar */
-#searchBar {
-  border: none;
-  width: 35vh;
-}
-.search-bar {
-  border: 2px solid #333;
-}
-.search-bar.fa-search {
-  float: right;
-}
-
-.hide {
+.hide { /* hide content - jquery */
   display: none;
 }
+/* list styles ENDS ------------------------------------------------------------*/
 
 
-
+/* example sentence BEGINS */
 .example-card {
   border-top: 2px solid #333;
 }
@@ -171,6 +171,25 @@ nav h1 {
   margin-top: 4vh;
   font-size: 1rem;
 }
-.blue-text {
+.blue-text { /* stasis highlight */
   color: rgb(73, 173, 255);
 }
+/* example sentence ENDS -------------------------------------------------------*/
+
+
+/* start of search bar */
+#searchBar {
+  border: none;
+  width: 35vh;
+  background-color: #fafafa;
+}
+.search-bar {
+  border: 2px solid #333;
+}
+.search-bar.fa-search {
+  float: right;
+}
+/* search bar ENDS -------------------------------------------------------------*/
+
+
+/* end of document */

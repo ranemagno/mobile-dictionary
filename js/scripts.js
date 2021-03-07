@@ -9,7 +9,7 @@
 //
 // });
 
-
+// menu nav BEGINS
 $('#menuIcon').click(function(){
   $('.mobile-menu').addClass('on-screen');
 });
@@ -17,14 +17,14 @@ $('#menuIcon').click(function(){
 $('#closeIcon').click(function(){
   $('.mobile-menu').removeClass('on-screen');
 });
-
+// menu nav ENDS
 
 // 1. highlight current information
 //    -add class for highlight
 //    -remove class for hidden
 // 2. hide other information
 
-// start of document element properties
+// document element properties
 $('.synonym-list').show();
 $('.antonym-list').hide();
 $('.entymol-list').hide();
@@ -44,7 +44,7 @@ $('.filter-synonym').click(function(){
 // show antonyms BEGINS
 $('.filter-antonym').click(function(){
   $('.filter-antonym').addClass('show-filter');
-  $('.filter-synonym').removeClass('show-filter, show-filter');
+  $('.filter-synonym').removeClass('show-filter');
   $('.filter-entymol').removeClass('show-filter');
   $('.antonym-list').show();
   $('.synonym-list').hide();
@@ -55,7 +55,7 @@ $('.filter-antonym').click(function(){
 // show entymology BEGINS
 $('.filter-entymol').click(function(){
   $('.filter-entymol').addClass('show-filter');
-  $('.filter-synonym').removeClass('show-filter, show-filter');
+  $('.filter-synonym').removeClass('show-filter');
   $('.filter-antonym').removeClass('show-filter');
   $('.entymol-list').show();
   $('.synonym-list').hide();
