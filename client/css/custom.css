@@ -1,0 +1,150 @@
+/* Where you typically put your custom properties */
+:root {
+  --clr-primary-black: rgb(32, 32, 32);
+  --clr-primary-bg: rgb(245, 245, 245);
+  --clr-accent-blue: rgb(72, 168, 222);
+  --ff-primary: 'Work Sans', sans-serif;
+  --ff-accent: 'Shippori Mincho B1', sans-serif;
+}
+
+*,
+*:: before,
+*:: after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li,
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--clr-primary-bg);
+  color: var(--clr-primary-black);
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont-mobile {
+  width: 27em;
+}
+
+
+/* nav styles */
+nav,
+section {
+  padding: 1rem 0;
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+nav {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-areas:
+    "app-name nav";
+  border: 2px solid var(--clr-primary-black);
+  border-style: none none solid none;
+  align-items: center;
+}
+nav h2 {
+  grid-area: app-name;
+  font-weight: 500;
+  font-size: 4vw;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+}
+#menuIcon {
+  width: 50%;
+  grid-area: nav;
+  justify-self: end;
+}
+/* nav styles */
+
+/* word and definition styles */
+h1 {
+  font-family: var(--ff-accent);
+  font-weight: 600;
+  font-size: 22vw;
+}
+.pronounce {
+  color: var(--clr-accent-blue);
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.definition {
+  padding-bottom: 1rem;
+}
+.cont-word-def {
+  border: 2px solid var(--clr-primary-black);
+  border-style: none none solid none;
+}
+/* word and definition styles */
+
+/* extra meanings and info */
+ul {
+  list-style-type: none;
+  padding-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-areas:
+    ". . .";
+  text-align: center;
+}
+li {
+  padding: 1rem 0 1rem 0;
+  border: 2px solid var(--clr-accent-blue);
+}
+li:nth-child(2) {
+  border-style: solid none solid none;
+}
+.active {
+  text-decoration: none;
+  color: white;
+  background-color: var(--clr-accent-blue);
+  animation: activeChange .5s;
+}
+@keyframes activeChange {
+  0% {
+    background-color: var(--clr-primary-bg);
+  }
+  100% {
+    background-color: var(--clr-accent-blue);
+  }
+}
+/* extra meanings and info */
+
+/* example word sentence */
+.cont {
+  
+}
+/* example word sentence */
+
+
+
+/* Any bigger than mobile */
+@media (min-width: 27em) {
+  h1 {
+    font-size: 5rem;
+  }
+  nav h2 {
+    font-size: 1rem;
+  }
+  .cont-mobile {
+    margin-top: 5%;
+    box-shadow: 0 0 20px rgba(93, 93, 93, 0.67);
+  }
+}
