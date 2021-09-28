@@ -1,0 +1,59 @@
+/* Where you typically put your custom properties */
+:root {
+  --clr-primary-black: rgb(32, 32, 32);
+  --clr-primary-bg: rgb(245, 245, 245);
+  --clr-accent-blue: rgb(72, 168, 222);
+  --ff-primary: 'Work Sans', sans-serif;
+  --ff-accent: 'Shippori Mincho B1', sans-serif;
+}
+
+*,
+*:: before,
+*:: after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--clr-primary-bg);
+  color: var(--clr-primary-black);
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont-mobile {
+  width: 27em;
+}
+nav,
+section {
+  padding: 1rem 0;
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+h1 {
+  font-family: var(--ff-accent);
+  font-weight: 600;
+  font-size: 22vw;
+}
+
+/* Any bigger than mobile */
+@media (min-width: 27em) {
+  h1 {
+    font-size: 5rem;
+  }
+  .cont-mobile {
+    margin-top: 5%;
+    box-shadow: 0 0 20px rgba(93, 93, 93, 0.67);
+
+  }
+}
