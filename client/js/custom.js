@@ -25,13 +25,22 @@
   // .catch(err => {console.log(err)})
 
   let getWordInfo = async ( word ) => {
-    let response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`).catch(err => {console.log(err)});
+    let response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
     // without await it will run before the response and the promise will stay pending
+    if (!response.ok){
+      sorry(word)
+    }
     let data = await response.json();
     let wordInfo = await data[0];
-
+    let update = await updateInfo(wordInfo);
     console.log(wordInfo);
     return wordInfo
+  }
+
+  function updateInfo( data ) {
+    word.textContent = data.word;
+    pronounce.textContent = `/${data.phonetic}/`;
+
   }
 
   let sorry = async ( word ) => {
@@ -56,11 +65,6 @@
   var word = document.querySelector('.word');
   var pronounce = document.querySelector('.pronounce');
   var definition = document.querySelector('.definition');
-
-  function udpateInfo() {
-    word.textContent = 'Cow';
-  }
-  udpateInfo();
 
 
 
