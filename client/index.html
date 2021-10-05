@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pocket Dictionary</title>
+  <title>Minimal Dictionary</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
@@ -14,15 +14,24 @@
 
   <div class="cont-mobile">
     <nav>
-      <h2>?? Pocket Edition</h2>
+      <h2>Simple Words</h2>
       <img src="css/menu.svg" alt="Menu Icon" id="menuIcon">
     </nav>
 
     <section>
       <div class="cont-word-def">
-        <h1 class="word">Stasis</h1>
-        <p class="pronounce">/pronounce word/</p>
-        <p class="definition">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <h1 class="word"></h1>
+        <p class="below-word">
+          <span class="pronounce"></span>
+          <!-- Needs to be in a variations container so that you can select a first-child variation -->
+          <span class="variations">
+          <!-- content added in js -->
+          </span>
+        </p>
+        <div class="cont-definition">
+          <!-- content added in js -->
+        </div>
+
       </div>
     </section>
 
@@ -33,7 +42,7 @@
           <li class="extra">antonyms</li>
           <li class="extra">entymol.</li>
         </ul>
-        <p class="extra-info">Information</p>
+        <p class="extra-info">information</p>
       </div>
     </section>
 

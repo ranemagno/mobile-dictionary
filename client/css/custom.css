@@ -41,7 +41,7 @@ body {
 }
 .cont-mobile {
   width: 27em;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 
@@ -57,8 +57,8 @@ nav {
   grid-template-columns: 90% 10%;
   grid-template-areas:
     "app-name nav";
-  border: 2px solid var(--clr-primary-black);
-  border-style: none none solid none;
+  /* border: 2px solid var(--clr-primary-black);
+  border-style: none none solid none; */
   align-items: center;
 }
 nav h2 {
@@ -76,18 +76,31 @@ nav h2 {
 /* nav styles */
 
 /* word and definition styles */
-h1 {
+.word {
   font-family: var(--ff-accent);
   font-weight: 600;
   font-size: 22vw;
+  margin-bottom: 1rem;
+}
+.below-word {
+  padding-bottom: 1rem;
 }
 .pronounce {
   color: var(--clr-accent-blue);
   font-weight: 500;
-  padding-bottom: 1rem;
+  font-style: italic;
+}
+.variation:first-child {
+  margin-left: 10%;
+}
+.variation {
+  margin-left: 5%;
 }
 .definition {
   padding-bottom: 1rem;
+}
+.definition:first-child {
+  text-transform: capitalize;
 }
 .cont-word-def {
   border: 2px solid var(--clr-primary-black);
@@ -125,6 +138,9 @@ li:nth-child(2) {
   100% {
     background-color: var(--clr-accent-blue);
   }
+}
+.extra-info::first-letter {
+  text-transform: capitalize;
 }
 /* extra meanings and info */
 
