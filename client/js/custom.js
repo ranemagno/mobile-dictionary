@@ -11,11 +11,11 @@
   var definitionParent = document.querySelector('.cont-definition')
   var definition = document.querySelector('.definition');
   var body = document.querySelector('body');
-  var variationParent = document.querySelector('.variations')
-  var variation = document.querySelector('.variation')
+  var variationParent = document.querySelector('.variations');
+  var variation = document.querySelector('.variation');
 
   body.onload = async () => {
-    let data = await getWordInfo('hello');
+    let data = await getWordInfo('wet');
     updateInfo(data)
     changeInfo(data.meanings[0]);
   }
@@ -88,6 +88,12 @@
       definitionParent.innerHTML += `<p class="definition">${defCount}. ${def.definition}</p>`;
     }
 
+    let synonyms = def.definitions[0].synonyms;
+    let strSynonyms = synonyms.join(', ')
+    console.log(strSynonyms);
+
+    changeExtras(strSynonyms, '', '')
+
   }
 
 // Updating & Change Page Info -------------------------------------------------
@@ -97,29 +103,52 @@
 
   let extras = document.querySelectorAll('.extra');
   let extraInfo = document.querySelector('.extra-info')
-  extraInfo.textContent = `here's a bunch of synonyms`
+
+  let changeExtras = ( synonyms, antonyms, entymol ) => {
+    // Initial Content
+    extraInfo.textContent = synonyms
+
+    extras.forEach(extras => {
+      extras.addEventListener('click', () => {
+
+        // Changing selection to blue
+        let active = document.querySelector('.active');
+        active.classList.remove('active');
+        !extras.classList.contains('active') ? extras.classList.add('active') : null;
+
+        extras.textContent == 'synonyms' ? extraInfo.textContent = synonyms
+        : extras.textContent == 'antonyms' ? extraInfo.textContent = antonyms
+        : extras.textContent == 'entymol.' ? extraInfo.textContent = entymol
+        : null;
+
+        extraInfo.textContent = synonyms
+
+      })
+    })
+  }
+
 
   // Going through the extra tabs and changing to active when clicked
-  extras.forEach(extras => {
-    extras.addEventListener('click', () => {
-      let active = document.querySelector('.active');
-      active.classList.remove('active');
-      !extras.classList.contains('active') ? extras.classList.add('active') : null;
-      // instead of current text it will be replaced with data grabbed from api
-      extras.textContent == 'synonyms' ? extraInfo.textContent = `here's a bunch of synonyms`
-      : extras.textContent == 'antonyms' ? extraInfo.textContent = `here's a bunch of antonyms`
-      : extras.textContent == 'entymol.' ? extraInfo.textContent = `here's it's entymol`
-      : null;
-    })
-  })
+  // extras.forEach(extras => {
+  //   extras.addEventListener('click', () => {
+  //     let active = document.querySelector('.active');
+  //     active.classList.remove('active');
+  //     !extras.classList.contains('active') ? extras.classList.add('active') : null;
+  //     // instead of current text it will be replaced with data grabbed from api
+  //     extras.textContent == 'synonyms' ? extraInfo.textContent = `here's a bunch of synonyms`
+  //     : extras.textContent == 'antonyms' ? extraInfo.textContent = `here's a bunch of antonyms`
+  //     : extras.textContent == 'entymol.' ? extraInfo.textContent = `here's it's entymol`
+  //     : null;
+  //   })
+  // })
 
 // Synonyms and Antonyms -------------------------------------------------------
 
 
 // Input Handler ---------------------------------------------------------------
 
-  // Get the input field
   var input = document.querySelector("#searchInput");
+  var searchIcon = document.querySelector('#searchIcon');
 
   // Execute a function when the user releases a key on the keyboard
   input.addEventListener('keyup', async (event) => {
@@ -131,6 +160,12 @@
       let wordInfo = await getWordInfo(input.value);
       updateInfo(wordInfo);
     }
+  });
+
+  searchIcon.addEventListener('click', async (event) => {
+    event.preventDefault();
+    let wordInfo = await getWordInfo(input.value);
+    updateInfo(wordInfo);
   });
 
 // Input Handler ---------------------------------------------------------------

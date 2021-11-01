@@ -40,7 +40,8 @@ body {
   align-items: center;
 }
 .cont-mobile {
-  width: 27em;
+  width: 100%;
+  /* margin: 10%; */
   /* height: 100vh; */
 }
 
@@ -139,35 +140,54 @@ li:nth-child(2) {
     background-color: var(--clr-accent-blue);
   }
 }
-.extra-info::first-letter {
+.extra-info {
   text-transform: capitalize;
+  line-height: 2rem;
 }
 /* extra meanings and info */
 
 /* example word sentence */
-.cont {
-
+.cont-word-sent {
+  margin-bottom: 5vh;
 }
 /* example word sentence */
 
 /* input styling */
-input {
+.input {
   position: fixed;
   bottom: 0;
-  margin: 2%;
+  width: inherit;
+  background-color: var(--clr-primary-bg);
+  height: 3rem;
+  margin-bottom: inherit;
+  display: flex;
+  border-top: 1px solid black;
+  align-items: center;
+}
+input {
   height: 3vh;
-  width: 87%;
+  width: 80%;
   font-family: var(--ff-primary);
   font-size: 1rem;
+  border: none; 
+  background-color: var(--clr-primary-bg);
+  margin: 0 0 0 5%;
 }
 input:focus {
   outline: none;
 }
+#searchIcon {
+  margin-left: 5%;
+}
 /* input styling */
 
+.shrink-text {
+  display: none;
+}
+
 /* Any bigger than mobile */
-@media (min-width: 27em) {
-  h1 {
+@media (min-width: 32em) {
+  /* h1 {
     font-size: 5rem;
   }
   nav h2 {
@@ -176,5 +196,17 @@ input:focus {
   .cont-mobile {
     margin-top: 5%;
     box-shadow: 0 0 20px rgba(93, 93, 93, 0.67);
+  }
+  .word {
+    font-size: 9vw;
+  }  */
+  .shrink-text {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont-mobile{
+    display: none;  
   }
 }
